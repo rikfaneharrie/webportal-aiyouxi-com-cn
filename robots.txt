@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rikfaneharrie.github.io/webportal-aiyouxi-com-cn/sitemap.xml
