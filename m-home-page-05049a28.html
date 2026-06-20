@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 金年会 | 访问提醒与使用说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            background: #f1f3f6;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Hero */
+        .hero {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e9edf2;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #475569;
+            border-left: 3px solid #94a3b8;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            max-width: 600px;
+        }
+
+        .hero .sub strong {
+            color: #1e293b;
+            font-weight: 500;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem 2.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 1.8rem;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+
+        .card p, .card li {
+            color: #334155;
+            margin-bottom: 0.7rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            padding-left: 1.4em;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+        }
+
+        .highlight {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .highlight p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            color: #475569;
+            padding-left: 0.5rem;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0 0.2rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .footer-links a {
+            color: #1e293b;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 1px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .footer-links a:hover {
+            border-bottom-color: #1e293b;
+        }
+
+        .brand-link {
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .btn-soft {
+            display: inline-block;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            color: #1e293b;
+            text-decoration: none;
+            transition: background 0.15s, box-shadow 0.15s;
+            margin-top: 0.3rem;
+        }
+
+        .btn-soft:hover {
+            background: #e2e8f0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+
+        .inline-link {
+            color: #1e293b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #94a3b8;
+        }
+
+        .inline-link:hover {
+            text-decoration-color: #1e293b;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            .footer-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Hero 区 -->
+    <div class="hero">
+        <h1>进入「金年会」<br>一份简明指南与访问提醒</h1>
+        <div class="sub">
+            <strong>金年会</strong> 是许多用户熟悉的活动平台，本页从使用角度整理了几点基础说明与常见疑问，
+            帮助新老参与者更顺畅地了解界面特征与访问方式。
+        </div>
+    </div>
+
+    <!-- 优势/特点区：从平台特征切入 -->
+    <div class="card">
+        <h2>平台特征速览</h2>
+        <p>基于多年运营积累，<a href="https://m-home-jinnianhui.com" class="inline-link">金年会</a> 在界面交互与信息呈现上形成了几个容易被忽略的细节：</p>
+        <ul>
+            <li><strong>模块化入口</strong> – 主功能区域采用卡片式分区，对应活动、资讯、个人中心等，层级清晰。</li>
+            <li><strong>自适应布局</strong> – 移动端与桌面端保持统一逻辑，但部分筛选面板在窄屏下会折叠，初次使用可留意右上角展开按钮。</li>
+            <li><strong>信息密度适中</strong> – 列表页默认显示关键字段，更多详情需点击条目展开，避免页面过载。</li>
+        </ul>
+        <div class="highlight">
+            <p><strong>一点提醒</strong>：部分页面加载依赖网络环境，如遇内容延迟，可尝试刷新或检查连接稳定性。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：访问与使用场景 -->
+    <div class="card">
+        <h2>访问与使用场景</h2>
+        <p>日常使用 <a href="https://m-home-jinnianhui.com" class="inline-link">金年会</a> 时，以下场景较为常见，了解后能节省操作时间：</p>
+        <ul>
+            <li><strong>快速查找内容</strong> – 首页顶部的搜索框支持模糊匹配，输入关键词即可定位相关活动或公告。</li>
+            <li><strong>个人记录查看</strong> – 登录后可在「我的」页面找到历史参与、收藏与留言记录，数据按时间倒序排列。</li>
+            <li><strong>通知与更新</strong> – 系统消息通常以角标形式显示在导航栏，建议定期查阅以免遗漏重要提醒。</li>
+        </ul>
+        <p style="margin-top: 1rem;">如果对界面布局或功能入口有疑问，可以参考平台内置的帮助说明（页面底部通常有「常见问题」链接）。</p>
+    </div>
+
+    <!-- FAQ 摘要区 -->
+    <div class="card">
+        <h2>FAQ 摘要 · 用户常问</h2>
+        <div class="faq-item">
+            <div class="q">Q: 是否必须注册才能浏览内容？</div>
+            <div class="a">大部分公开信息（如活动预告、公告）无需登录即可查看；但参与互动或使用个人功能需要注册账号。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q: 移动端与电脑端功能是否一致？</div>
+            <div class="a">核心功能保持一致，但移动端针对触控优化了按钮尺寸与手势操作，部分高级筛选在桌面端更直观。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q: 如何联系客服或反馈问题？</div>
+            <div class="a">页面底部设有「联系支持」入口，提交表单后通常在工作时段内回复；紧急问题可通过站内消息通道。</div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #64748b;">更多细节建议直接在 <a href="https://m-home-jinnianhui.com" class="inline-link">金年会</a> 内浏览对应页面，信息最为准确。</p>
+    </div>
+
+    <!-- 底部链接区 -->
+    <div class="footer-links">
+        <span>© 简明指南 · 非官方说明页</span>
+        <span><a href="https://m-home-jinnianhui.com">金年会</a> · <a href="#" style="border-bottom: none; cursor: default; color: #94a3b8;">隐私原则</a> · <a href="#" style="border-bottom: none; cursor: default; color: #94a3b8;">使用须知</a></span>
+        <span style="color: #94a3b8; font-size: 0.8rem;">更新于2025 · 内容仅供参考</span>
+    </div>
+
+</div>
+</body>
+</html>
